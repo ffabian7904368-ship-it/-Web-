@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NotesApp</title>
+  <link rel="stylesheet" href="style12.css">
+</head>
+<body>
+  <div class="app">
+    <div class="app__sidebar">
+      <button class="app__menu-button" type="button">☰</button>
+      <button class="app__settings-button" type="button">⚙</button>
+    </div>
+    <div class="notes">
+      <div class="notes__toolbar">
+        <button class="notes__sort-button" type="button">Сортировка по дате ▾</button>
+        
+        <div class="notes__search">
+          <span>Поиск заметок</span>
+          <span></span>
+        </div>
+      </div>
+      <div class="notes__list" id="navbar"></div>
+    </div>
+    <div class="editor">
+      <div class="editor__topbar">
+        <div class="editor__navigation">
+          <button class="editor__nav-button" type="button">‹</button>
+          <button class="editor__nav-button" type="button">›</button>
+        </div>
+        <button class="editor__delete-button" type="button">🗑</button>
+      </div>
+      <div class="editor__format-toolbar">
+        <span>AA</span>
+        <span>☷</span>
+        <span>↔ 12 pt</span>
+        <b>B</b>
+        <i>I</i>
+        <u>U</u>
+        <span>≡</span>
+        <span>≡</span>
+        <span>≡</span>
+        <span>▰</span>
+      </div>
+      <div class="editor__document"></div>
+      <div class="editor__status">
+        <span>100%</span>
+        <span>−</span>
+        <span>Масштаб</span>
+        <span>+</span>
+        <span class="editor__expand-icon">⤢</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+<script src="main12.js" defer></script>
