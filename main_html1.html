@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NotesApp</title>
+  <link rel="stylesheet" href="main_css1.css">
+</head>
+<body>
+  <div class="app">
+    <div class="app__sidebar">
+      <button class="app__menu-button" type="button">☰</button>
+      <button class="app__settings-button" type="button">⚙</button>
+    </div>
+    <div class="notes">
+      <div class="notes__toolbar">
+        <button class="notes__sort-button" type="button">Сортировка по дате ▾</button>
+
+        <div class="notes__search">
+          <span>Поиск заметок</span>
+          <span></span>
+        </div>
+
+        <button class="notes__add-button" id="add-button" type="button">+</button>
+      </div>
+      <div class="notes__list" id="navbar"></div>
+    </div>
+    <div class="editor">
+      <div class="editor__topbar">
+        <div class="editor__navigation">
+          <button class="editor__nav-button" type="button">‹</button>
+          <button class="editor__nav-button" type="button">›</button>
+        </div>
+        <button class="editor__delete-button" type="button">🗑</button>
+      </div>
+
+      
+      <div class="editor__format-toolbar" id="format-toolbar">
+        <select class="editor__select" id="heading-select" title="Стиль текста">
+          <option value="p">Текст</option>
+          <option value="1">Заголовок 1</option>
+          <option value="2">Заголовок 2</option>
+          <option value="3">Заголовок 3</option>
+        </select>
+
+        <span class="editor__separator"></span>
+
+        <button class="editor__format-button" type="button" data-action="bulletList" title="Маркированный список">☷</button>
+        <button class="editor__format-button" type="button" data-action="orderedList" title="Нумерованный список">1.</button>
+
+        <span class="editor__separator"></span>
+
+        <button class="editor__format-button" type="button" data-action="bold" title="Жирный"><b>B</b></button>
+        <button class="editor__format-button" type="button" data-action="italic" title="Курсив"><i>I</i></button>
+        <button class="editor__format-button" type="button" data-action="underline" title="Подчёркнутый"><u>U</u></button>
+        <button class="editor__format-button" type="button" data-action="strike" title="Зачёркнутый"><s>S</s></button>
+
+        <span class="editor__separator"></span>
+
+        <button class="editor__format-button" type="button" data-action="alignLeft" title="По левому краю">Л</button>
+        <button class="editor__format-button" type="button" data-action="alignCenter" title="По центру">Ц</button>
+        <button class="editor__format-button" type="button" data-action="alignRight" title="По правому краю">П</button>
+
+        <span class="editor__separator"></span>
+
+        <button class="editor__format-button" type="button" data-action="highlight" title="Выделить маркером">▰</button>
+
+        <span class="editor__separator"></span>
+
+        <button class="editor__format-button" type="button" data-action="undo" title="Отменить">↶</button>
+        <button class="editor__format-button" type="button" data-action="redo" title="Повторить">↷</button>
+      </div>
+
+      
+      <div class="editor__document" id="editor"></div>
+
+      <div class="editor__status">
+        <span>100%</span>
+        <span>−</span>
+        <span>Масштаб</span>
+        <span>+</span>
+        <span class="editor__expand-icon">⤢</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal__window">
+      <div class="modal__title">Новая заметка</div>
+      <input class="modal__input" id="modal-title" type="text" maxlength="40" placeholder="Заголовок заметки">
+      <textarea class="modal__textarea" id="modal-text" placeholder="Краткое описание"></textarea>
+      <div class="modal__buttons">
+        <button class="modal__button" id="cancel-button" type="button">Отмена</button>
+        <button class="modal__button modal__button--save" id="save-button" type="button">Сохранить</button>
+      </div>
+    </div>
+  </div>
+
+  
+  <script type="module" src="main_json1.js"></script>
+</body>
+</html>
